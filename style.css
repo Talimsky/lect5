@@ -6,15 +6,16 @@ body{
     margin: 0;
 }
 .card {
-    width: 220px;
+    width: 260px;
     margin: 30px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 10px 25px #ccc;
     border-radius: 25px;
 }
+
 .card-photo {
-    display: block;
+    display: flex;
     width: 200px;
     height: 200px;
     margin: 0 auto;
@@ -78,7 +79,7 @@ padding: 0px 15px;
     font-size: 18px;
     line-height: 150%; */
 }
-.full-screen { 
+/* .full-screen { 
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -115,11 +116,10 @@ padding: 0px 15px;
    left: 0;
    width: 100%;
    height: 100%;
-   object-fit: cover;  */
+   object-fit: cover;  */ */
 }
 .content {
     background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/26bcbe81-a3fa-43da-8b10-7b37ce15b07d/demdyla-5c43f79c-b70a-4fd7-bf23-848883140ae6.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI2YmNiZTgxLWEzZmEtNDNkYS04YjEwLTdiMzdjZTE1YjA3ZFwvZGVtZHlsYS01YzQzZjc5Yy1iNzBhLTRmZDctYmYyMy04NDg4ODMxNDBhZTYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.znQzGkeCg0xHnVXotF6eMsJwxyqIt3Xp9KrqSFgYEFs");
-    position: relative;
     z-index: 5;
  }
 .content_container {
@@ -132,6 +132,50 @@ padding: 0px 15px;
  .content_container p {
 margin: 0px 0px 20px 0px;
  }
- .card{
-    position: relative;
- }
+ .content_footer {
+    margin-left: auto;
+    margin: 0px auto;
+    max-width: 1200px;  
+    width: 260px;
+    padding: 10px;
+    
+    line-height: 150%;
+    background-color: rgb(180, 146, 146);
+    box-shadow: 0 10px 25px #ccc;
+    border-radius: 25px;
+    animation: move-circle 4s ease-in-out forwards 4;
+    animation-direction: alternate;
+    animation-delay: 3s;
+}
+.content_footer:hover .card-info{
+    animation-play-state: paused;
+}
+@keyframes move-circle {
+    0%{
+    transform: translateX(0) translateY(0);
+    }
+    25%{
+    transform: translateX(100%);
+    color: rgb(69, 36, 255);
+    background-color: lightsalmon;
+    }
+    50%{
+    transform: translateX(100%) translateY(100%);
+    color: rgba(69, 36, 255, 0.678);
+    background-color: #ffa07abe;
+
+    }
+    75%{
+    transform: translateX(0) translateY(100%);
+    color: rgba(69, 36, 255, 0.397);
+    background-color: #ffa07a5e;
+
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        color: rgba(69, 36, 255, 0.151);
+        background-color: #ffa07a27;
+
+
+    }
+}
